@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../portfolio/portfolio_page.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -14,7 +15,12 @@ class DashboardPage extends StatelessWidget {
   child: Column(
     children: [
       ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const PortfolioPage()),
+          );
+        },
         child: const Text('Portfolio'),
       ),
       ElevatedButton(
