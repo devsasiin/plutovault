@@ -9,12 +9,25 @@ class DashboardPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Pluto Vault'),
       ),
-      body: const Center(
-        child: Text(
-          'Your Investments. Your Control.',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Padding(
+  padding: const EdgeInsets.all(16),
+  child: Column(
+    children: [
+      ElevatedButton(
+        onPressed: () {},
+        child: const Text('Portfolio'),
       ),
+      ElevatedButton(
+        onPressed: () {},
+        child: const Text('SIP'),
+      ),
+      ElevatedButton(
+        onPressed: () {},
+        child: const Text('Backup'),
+      ),
+    ],
+  ),
+),
     );
   }
 }

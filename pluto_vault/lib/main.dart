@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
+import 'features/dashboard/dashboard_page.dart';
 
 void main() {
-  runApp(const PlutoApp());
+  runApp(const PlutoVaultApp());
 }
 
-class PlutoApp extends StatelessWidget {
-  const PlutoApp({super.key});
+class PlutoVaultApp extends StatelessWidget {
+  const PlutoVaultApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pluto Vault',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Pluto Vault'),
-        ),
-        body: const Center(
-          child: Text(
-            'Pluto Vault Running Successfully!',
-            style: TextStyle(fontSize: 24),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: const DashboardPage(),
     );
   }
 }
