@@ -14,4 +14,18 @@ class VaultStorageService {
 
   await file.writeAsString(encryptedData);
 }
+
+  Future<String?> loadVault() async {
+    try {
+      final file = await getVaultFile();
+
+      if (await file.exists()) {
+        return await file.readAsString();
+      } else {
+        return null;
+      }
+    } catch (e) {
+      return null;
+    }
+  }
 }
