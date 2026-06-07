@@ -8,4 +8,10 @@ class VaultStorageService {
 
     return File('${dir.path}/Vault.pluto');
   }
+
+  Future<void> saveVault(String encryptedData) async {
+  final file = await getVaultFile();
+
+  await file.writeAsString(encryptedData);
+}
 }
